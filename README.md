@@ -16,4 +16,4 @@ Proyek ini dibuat sebagai bagian dari tugas praktikum dengan menerapkan pemisaha
 Masih dalam tahap pengembangan.
 
 ## Developer
-Anisa Salsa
+Anisa Salsa Faradila (240602055)
