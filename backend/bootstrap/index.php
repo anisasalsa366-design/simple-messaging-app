@@ -35,6 +35,7 @@ spl_autoload_register(static function (string $class): void {
 
 $router = new Router();
 $registerRoutes = require dirname(__DIR__) . '/routes/api.php';
+header('Access-Control-Allow-Origin: *');
 $registerRoutes($router);
 
 return $router;

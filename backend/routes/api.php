@@ -3,13 +3,14 @@
 declare(strict_types=1);
 
 use Controllers\UserController;
+use Controllers\ChatController;
 use Lib\Router;
 use function Lib\responseJson;
 use Lib\DB;
 
 return static function (Router $router): void {
+
     $router->get('/api/health', static function (): void {
-        // Check database connection
         try {
             $db = DB::getInstance();
             $db->query('SELECT 1');
@@ -29,4 +30,6 @@ return static function (Router $router): void {
     });
 
     $router->post('/api/users', [UserController::class, 'register']);
+
+    $router->post('/api/chat/image', [ChatController::class, 'uploadImage']);
 };
